@@ -605,6 +605,13 @@
         const heroDivider = document.querySelector('.hero__divider .divider--dot');
         if (heroDivider) heroDivider.classList.add('animated');
       }, 2700);
+
+      // Safety fallback: force all hidden elements to reveal after 4s
+      setTimeout(() => {
+        document.querySelectorAll('.img-reveal:not(.revealed), .img-reveal--right:not(.revealed)').forEach(el => {
+          el.classList.add('revealed');
+        });
+      }, 4000);
     });
 
   });
