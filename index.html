@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vértice — Básicos que te definen | Atelier de Co-creación</title>
+  <meta name="description" content="Vértice es un Atelier Moderno de Co-creación. Diseñamos prendas personalizadas que se adaptan a tu identidad y cuerpo real. Básicos que te definen.">
+  <meta name="keywords" content="Vértice, atelier, moda personalizada, co-creación, ropa a medida, diseño personalizado, básicos">
+  <meta property="og:title" content="Vértice — Básicos que te definen">
+  <meta property="og:description" content="No solo hacemos ropa de calidad; te acompañamos a crearla. Real, personalizado, tuyo.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1C1917">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%231C1917' width='100' height='100'/%3E%3Cpath d='M50 15L25 85h8l17-50 17 50h8L50 15z' fill='%23C4A97D'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar__logo">
+        <img src="images/logo-dark.jpeg" alt="Vértice" class="navbar__logo-img">
+      </a>
+
+      <div class="navbar__links" id="navLinks">
+        <a href="#filosofia" class="navbar__link">Filosofía</a>
+        <a href="#valores" class="navbar__link">Valores</a>
+        <a href="#proceso" class="navbar__link">Proceso</a>
+        <a href="#atelier" class="navbar__link">Atelier</a>
+        <a href="#experiencia" class="navbar__link">Experiencia</a>
+        <a href="#contacto" class="navbar__cta">Agendar Cita</a>
+      </div>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg">
+      <img src="images/hero-luxury.png" alt="Atelier Vértice" loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <!-- SVG Monogram Logo -->
+      <div class="hero__logo reveal">
+        <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <!-- Diamond outline -->
+          <path d="M60 8 L90 60 L60 112 L30 60 Z" fill="none" stroke="#C4A97D" stroke-width="0.8"/>
+          <!-- Top dot -->
+          <circle cx="60" cy="8" r="3" fill="#C4A97D"/>
+          <!-- V letter -->
+          <path d="M35 35 L60 95 L85 35" fill="none" stroke="#C4A97D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <h1 class="hero__title">Vértice</h1>
+
+      <div class="hero__divider">
+        <div class="divider--dot">
+          <span></span>
+        </div>
+      </div>
+
+      <p class="hero__tagline">Básicos que te definen</p>
+
+      <p class="hero__subtitle">
+        No imponemos moda. Escuchamos tus decisiones, entendemos tu esencia 
+        y materializamos prendas que son exclusivamente tuyas.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--gold">
+          Comienza tu prenda
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#proceso" class="btn btn--outline">Conoce el proceso</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span class="hero__scroll-text">Descubre</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== PHILOSOPHY ========== -->
+  <section class="philosophy" id="filosofia">
+    <div class="container">
+      <div class="philosophy__grid">
+        <div class="philosophy__image reveal">
+          <img src="images/cocreation-session.png" alt="Sesión de co-creación en Vértice" loading="lazy">
+          <div class="philosophy__image-frame"></div>
+          <div class="philosophy__accent">
+            <div class="number">100%</div>
+            <div class="label">Personalización</div>
+          </div>
+        </div>
+
+        <div class="philosophy__content">
+          <span class="section-label reveal">Nuestra Filosofía</span>
+          <h2 class="section-title reveal reveal-d1">
+            Un atelier que escucha,<br>acompaña y <em>materializa</em>
+          </h2>
+
+          <div class="divider reveal reveal-d2"></div>
+
+          <p class="section-desc reveal reveal-d2">
+            Vértice nació para solucionar problemas de carácter emocional a través del vestir. 
+            Más que una tienda de ropa, somos tu compañera en el proceso de crear prendas que 
+            generan comodidad, belleza y confianza — a un costo accesible.
+          </p>
+
+          <div class="philosophy__quote reveal reveal-d3">
+            <p>
+              "No solo hacemos ropa de calidad; te acompañamos a crearla. 
+              Escuchamos tus decisiones y materializamos una prenda exclusivamente tuya."
+            </p>
+            <cite>— Propuesta de valor, Vértice</cite>
+          </div>
+
+          <a href="#proceso" class="btn btn--outline-dark reveal reveal-d4">
+            Descubre cómo funciona
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VALUES ========== -->
+  <section class="values" id="valores">
+    <div class="container">
+      <div class="values__header">
+        <span class="section-label reveal">Lo que nos define</span>
+        <h2 class="section-title reveal reveal-d1">Valores Innegociables</h2>
+        <div class="divider divider--center reveal reveal-d2"></div>
+        <p class="section-desc mx-auto reveal reveal-d2" style="color: var(--text-on-dark-muted);">
+          Estos principios guían cada puntada, cada conversación y cada decisión que tomamos junto a ti.
+        </p>
+      </div>
+
+      <div class="values__grid">
+        <!-- Libertad -->
+        <div class="value-card reveal">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12A10 10 0 1 1 12 2"/><path d="M22 2 13 11"/><path d="M16 2h6v6"/></svg>
+          </div>
+          <h3 class="value-card__title">Libertad</h3>
+          <p class="value-card__desc">En el movimiento y en el ser. Tu prenda se adapta a tu vida, no al revés.</p>
+        </div>
+
+        <!-- Limpieza -->
+        <div class="value-card reveal reveal-d1">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="value-card__title">Limpieza</h3>
+          <p class="value-card__desc">En los procesos, en el diseño y en el trato. Transparencia total.</p>
+        </div>
+
+        <!-- Comodidad -->
+        <div class="value-card reveal reveal-d2">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="value-card__title">Comodidad</h3>
+          <p class="value-card__desc">El atributo principal. Cada prenda se siente como una segunda piel.</p>
+        </div>
+
+        <!-- Sencillez -->
+        <div class="value-card reveal reveal-d3">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+          </div>
+          <h3 class="value-card__title">Sencillez</h3>
+          <p class="value-card__desc">Menos complicaciones, más soluciones directas. Simple y efectivo.</p>
+        </div>
+
+        <!-- Compromiso -->
+        <div class="value-card reveal reveal-d4">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="value-card__title">Compromiso</h3>
+          <p class="value-card__desc">Amabilidad y actitud proactiva durante todo el proceso de co-creación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section class="process" id="proceso">
+    <div class="container">
+      <div class="process__header">
+        <span class="section-label reveal">Tu viaje con nosotras</span>
+        <h2 class="section-title reveal reveal-d1">El Proceso de Co-creación</h2>
+        <div class="divider divider--center reveal reveal-d2"></div>
+        <p class="section-desc mx-auto reveal reveal-d2">
+          Tú tomas las decisiones, nosotras te guiamos y acompañamos paso a paso hasta entregar tu prenda ideal.
+        </p>
+      </div>
+
+      <div class="process__steps">
+        <div class="step-card reveal">
+          <div class="step-card__number">01</div>
+          <h3 class="step-card__title">Conversemos</h3>
+          <p class="step-card__desc">
+            Nos cuentas qué necesitas, qué te inspira, qué quieres sentir. 
+            Escuchamos tus decisiones con atención absoluta.
+          </p>
+        </div>
+
+        <div class="step-card reveal reveal-d1">
+          <div class="step-card__number">02</div>
+          <h3 class="step-card__title">Co-diseñamos</h3>
+          <p class="step-card__desc">
+            Juntas elegimos silueta, tela, corte y detalles. 
+            Tu estilo, tu cuerpo, tus medidas — todo cuenta.
+          </p>
+        </div>
+
+        <div class="step-card reveal reveal-d2">
+          <div class="step-card__number">03</div>
+          <h3 class="step-card__title">Materializamos</h3>
+          <p class="step-card__desc">
+            Creamos tu prenda con dedicación artesanal y te la entregamos 
+            con una carta de agradecimiento escrita a mano.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ATELIER ========== -->
+  <section class="atelier" id="atelier">
+    <div class="container">
+      <div class="atelier__grid">
+        <div class="atelier__content">
+          <span class="section-label reveal">Detrás de escena</span>
+          <h2 class="section-title reveal reveal-d1">
+            Nuestro Atelier,<br><em>tu espacio</em>
+          </h2>
+          <div class="divider reveal reveal-d2"></div>
+          <p class="section-desc reveal reveal-d2" style="color: var(--text-on-dark-muted);">
+            Un lugar cálido donde las ideas se convierten en prendas. 
+            Aquí huele a madera dulce, suena música suave y cada detalle 
+            está pensado para que te sientas como en casa.
+          </p>
+
+          <div class="atelier__features reveal reveal-d3">
+            <div class="atelier__feature">
+              <div class="atelier__feature-line"></div>
+              <div>
+                <h4>Personalización Absoluta</h4>
+                <p>No hay un solo estilo definido. La ropa toma la forma, el corte y el estilo que tú elijas.</p>
+              </div>
+            </div>
+
+            <div class="atelier__feature">
+              <div class="atelier__feature-line"></div>
+              <div>
+                <h4>Calidad Artesanal</h4>
+                <p>Cada puntada importa. Atención exhaustiva a cada decisión de diseño.</p>
+              </div>
+            </div>
+
+            <div class="atelier__feature">
+              <div class="atelier__feature-line"></div>
+              <div>
+                <h4>Experiencia Sensorial</h4>
+                <p>Café caliente, texturas de gamuza y terciopelo, y un ambiente acogedor como la casa de la abuela.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="atelier__gallery reveal reveal-d2">
+          <div class="atelier__gallery-item">
+            <img src="images/atelier-dark.png" alt="Interior del atelier Vértice" loading="lazy">
+          </div>
+          <div class="atelier__gallery-item">
+            <img src="images/process-sewing.png" alt="Proceso de costura artesanal" loading="lazy">
+          </div>
+          <div class="atelier__gallery-item">
+            <img src="images/hero-atelier.png" alt="Espacio de trabajo del atelier" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="experience" id="experiencia">
+    <div class="container">
+      <div class="experience__wrapper">
+        <div class="experience__image reveal">
+          <img src="images/unboxing-experience.png" alt="Experiencia de unboxing Vértice" loading="lazy">
+          <div class="experience__image-frame"></div>
+        </div>
+
+        <div class="experience__content">
+          <span class="section-label reveal">La experiencia completa</span>
+          <h2 class="section-title reveal reveal-d1">
+            Cada detalle importa,<br><em>especialmente el final</em>
+          </h2>
+          <div class="divider reveal reveal-d2"></div>
+          <p class="section-desc reveal reveal-d2">
+            El momento de recibir tu prenda es mágico: algo que tú misma ayudaste a crear, 
+            envuelto con cuidado y acompañado de una carta escrita a mano.
+          </p>
+
+          <div class="experience__list reveal reveal-d3">
+            <div class="experience__item">
+              <div class="experience__item-check">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <h4>Lo que ves es lo que recibes</h4>
+                <p>Sinceridad absoluta. Tu prenda será exactamente lo que diseñamos juntas.</p>
+              </div>
+            </div>
+
+            <div class="experience__item">
+              <div class="experience__item-check">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <h4>Carta de agradecimiento a mano</h4>
+                <p>Cada entrega incluye una nota personal porque cada clienta importa.</p>
+              </div>
+            </div>
+
+            <div class="experience__item">
+              <div class="experience__item-check">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <h4>Atención directa por WhatsApp</h4>
+                <p>Comunicación rápida, cercana y sin intermediarios durante todo el proceso.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contacto" class="btn btn--outline-dark reveal reveal-d4">
+            Quiero mi prenda
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-banner" id="contacto">
+    <div class="container">
+      <!-- Small logo -->
+      <div class="cta-banner__logo reveal">
+        <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60 8 L90 60 L60 112 L30 60 Z" fill="none" stroke="#C4A97D" stroke-width="0.8"/>
+          <circle cx="60" cy="8" r="3" fill="#C4A97D"/>
+          <path d="M35 35 L60 95 L85 35" fill="none" stroke="#C4A97D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <span class="section-label reveal reveal-d1">¿Lista para crear?</span>
+
+      <h2 class="section-title reveal reveal-d2">
+        Tu próxima prenda favorita<br>empieza con una conversación
+      </h2>
+
+      <div class="divider divider--center reveal reveal-d3"></div>
+
+      <p class="section-desc mx-auto text-center reveal reveal-d3">
+        Escríbenos y comencemos juntas. Sin compromiso, sin presión — solo ganas de crear algo increíble.
+      </p>
+
+      <div class="cta-banner__actions reveal reveal-d4">
+        <a href="https://wa.me/573000000000?text=Hola%20Vértice%20✨%20Quiero%20crear%20mi%20prenda" class="btn btn--whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="currentColor"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 0 1-4.19-1.18l-.3-.18-3.1.81.83-3.04-.2-.31A7.97 7.97 0 0 1 4 12a8 8 0 1 1 16 0 8 8 0 0 1-8 8z" fill="currentColor"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a href="https://instagram.com/vertice.atelier" class="btn btn--outline" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          Síguenos en Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand">
+            <span class="footer__brand-name">Vértice</span>
+          </div>
+          <p class="footer__description">
+            Atelier Moderno de Co-creación. Diseñamos prendas que se adaptan a tu identidad y cuerpo real. Básicos que te definen.
+          </p>
+          <div class="footer__social">
+            <a href="https://instagram.com/vertice.atelier" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            </a>
+            <a href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://tiktok.com/@vertice.atelier" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.57 6.33 6.33 0 0 0 9.37 22a6.33 6.33 0 0 0 6.37-6.33V9.37a8.16 8.16 0 0 0 4.74 1.52v-3.4a4.85 4.85 0 0 1-.89-.8z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#filosofia">Filosofía</a></li>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#atelier">Atelier</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#proceso">Co-creación</a></li>
+            <li><a href="#proceso">Diseño a medida</a></li>
+            <li><a href="#proceso">Asesoría de estilo</a></li>
+            <li><a href="#contacto">Consultas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/573000000000">WhatsApp</a></li>
+            <li><a href="https://instagram.com/vertice.atelier">Instagram</a></li>
+            <li><a href="mailto:hola@vertice-atelier.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Vértice Atelier. Todos los derechos reservados.</p>
+        <p>Hecho con dedicación artesanal</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING WHATSAPP ========== -->
+  <a href="https://wa.me/573000000000?text=Hola%20Vértice%20✨%20Quiero%20saber%20más" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 0 1-4.19-1.18l-.3-.18-3.1.81.83-3.04-.2-.31A7.97 7.97 0 0 1 4 12a8 8 0 1 1 16 0 8 8 0 0 1-8 8z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
