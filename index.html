@@ -120,7 +120,8 @@
         <!-- Producto 1 -->
         <article class="product-card" data-id="p1">
           <div class="product-card__image-container">
-            <img src="images/tshirt_monastery.jpg" alt="Camiseta Monastery / Nukastery" class="product-card__image" loading="lazy">
+            <img src="images/tshirt_monastery.jpg" alt="Monastery" class="product-card__image">
+            <div class="product-card__image-hover"></div>
           </div>
           <div class="product-card__info">
             <h3 class="product-card__title">Monastery / Nukastery</h3>
@@ -155,7 +156,8 @@
         <!-- Producto 2 -->
         <article class="product-card" data-id="p2">
           <div class="product-card__image-container">
-            <img src="images/tshirt_pattern_light.jpg" alt="Camiseta Vértice Patrones Clara" class="product-card__image" loading="lazy">
+            <img src="images/tshirt_pattern_light.jpg" alt="Pattern Light" class="product-card__image">
+            <div class="product-card__image-hover"></div>
           </div>
           <div class="product-card__info">
             <h3 class="product-card__title">Vértice Patrones Claro</h3>
@@ -188,7 +190,8 @@
         <!-- Producto 3 -->
         <article class="product-card" data-id="p3">
           <div class="product-card__image-container">
-            <img src="images/tshirt_pattern_dark.jpg" alt="Camiseta Vértice Patrones Oscura" class="product-card__image" loading="lazy">
+            <img src="images/tshirt_pattern_dark.jpg" alt="Pattern Dark" class="product-card__image">
+            <div class="product-card__image-hover"></div>
           </div>
           <div class="product-card__info">
             <h3 class="product-card__title">Vértice Patrones Oscuro</h3>
@@ -220,7 +223,8 @@
         <!-- Producto 4 -->
         <article class="product-card" data-id="p4">
           <div class="product-card__image-container">
-            <img src="images/tshirt_clemont.jpg" alt="Camiseta Clemont León" class="product-card__image" loading="lazy">
+            <img src="images/tshirt_clemont.jpg" alt="Clemont" class="product-card__image">
+            <div class="product-card__image-hover"></div>
           </div>
           <div class="product-card__info">
             <h3 class="product-card__title">Clemont León</h3>
@@ -256,7 +260,8 @@
         <!-- Producto 5 -->
         <article class="product-card" data-id="p5">
           <div class="product-card__image-container">
-            <img src="images/tshirt_undergold.jpg" alt="Camiseta Undergold Pájaro" class="product-card__image" loading="lazy">
+            <img src="images/tshirt_undergold.jpg" alt="Undergold" class="product-card__image">
+            <div class="product-card__image-hover"></div>
           </div>
           <div class="product-card__info">
             <h3 class="product-card__title">Undergold Pájaro</h3>
@@ -288,6 +293,42 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ Section ========== -->
+  <section id="faq" class="faq-section" style="padding: var(--sp-2xl) 0;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-title text-center" style="margin-bottom: var(--sp-lg);">Preguntas Frecuentes</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cómo funciona el pago contra entrega?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Es muy sencillo. Realizas tu pedido a través de la página web (tu carrito nos llegará por WhatsApp). Nosotros procesamos el envío y tú pagas el total en efectivo únicamente cuando el paquete llegue a la puerta de tu casa. 100% seguro y sin riesgos.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuánto tiempo tarda el envío?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Los envíos locales suelen tomar entre 1 y 3 días hábiles. Para envíos nacionales, el tiempo estimado es de 2 a 5 días hábiles, dependiendo de tu ubicación exacta y la transportadora.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuál es la política de devoluciones o cambios?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ofrecemos cambios por talla o defectos de fábrica dentro de los primeros 5 días luego de recibir la prenda. La camiseta debe estar sin usar, con sus etiquetas y en el empaque original. ¡Queremos que te sientas cómodo con tus básicos!</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -408,6 +449,9 @@
       <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 0 1-4.19-1.18l-.3-.18-3.1.81.83-3.04-.2-.31A7.97 7.97 0 0 1 4 12a8 8 0 1 1 16 0 8 8 0 0 1-8 8z"/>
     </svg>
   </a>
+
+  <!-- ─── Toasts ─────────────────────────── -->
+  <div id="toastContainer" class="toast-container"></div>
 
   <script src="script.js"></script>
 </body>

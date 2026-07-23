@@ -203,6 +203,32 @@
     }
   }
 
+  // ─── FAQ Accordion ────────────────────────
+  class FAQAccordion {
+    constructor() {
+      this.items = document.querySelectorAll('.faq-item');
+      if (!this.items.length) return;
+      this.init();
+    }
+    init() {
+      this.items.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          this.items.forEach(otherItem => {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+          });
+          if (!isActive) {
+            item.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+    }
+  }
+
   // ─── Preloader ────────────────────────────
   class Preloader {
     constructor(onComplete) {
@@ -260,7 +286,7 @@
           const size = card.querySelector('.size-select').value;
           
           this.addToCart({ id: id + '-' + color + '-' + size, name, price, color, size, qty: 1 });
-          this.openCart();
+          this.showToast(name);
         });
       });
 
@@ -346,6 +372,22 @@
       });
     }
 
+    showToast(productName) {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.textContent = `${productName} añadida al carrito`;
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => toast.classList.add('show'));
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 400);
+      }, 3000);
+    }
+
     openCart() {
       this.cartSidebar.classList.add('active');
       this.cartOverlay.classList.add('active');
@@ -415,6 +457,7 @@
       new NavbarController(smoothScroll);
       new ScrollProgress(smoothScroll);
       new WhatsAppFloat();
+      new FAQAccordion();
       new EcommerceSystem();
 
       // Trigger hero divider animation
