@@ -35,7 +35,14 @@
 
   <!-- ========== NAVIGATION ========== -->
   <nav class="navbar" id="navbar">
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <!-- Nav Links -->
+      <div class="navbar__links" id="navLinks">
+        <a href="#inicio" class="navbar__link active">Inicio</a>
+        <a href="#catalogo" class="navbar__link">Catálogo</a>
+      </div>
+
+      <!-- Logo -->
       <a href="#" class="navbar__logo" data-magnetic>
         <svg class="navbar__monogram" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
           <path d="M60 8 L90 60 L60 112 L30 60 Z" fill="none" stroke="#C4A97D" stroke-width="0.8"/>
@@ -44,13 +51,8 @@
         </svg>
       </a>
 
-      <div class="navbar__links" id="navLinks">
-        <a href="#inicio" class="navbar__link">Inicio</a>
-        <a href="#catalogo" class="navbar__link">Catálogo</a>
-      </div>
-
       <div class="navbar__actions" style="display: flex; align-items: center; gap: 1rem;">
-        <button class="cart-toggle" id="cartToggle" aria-label="Abrir carrito" data-magnetic style="background: none; border: none; color: var(--clr-cream-50); cursor: pointer; position: relative;">
+        <button class="cart-toggle" id="cartToggle" aria-label="Abrir carrito" data-magnetic>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
             <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
