@@ -287,6 +287,7 @@
           const imgSrc = card.querySelector('.product-card__image').src;
           
           this.addToCart({ id: id + '-' + color + '-' + size, name, price, color, size, qty: 1 });
+          this.flyToCart(card.querySelector('.product-card__image'));
           this.showToast(name, imgSrc);
         });
       });
@@ -307,6 +308,14 @@
       });
       
       document.getElementById('checkoutClose').addEventListener('click', () => this.closeCheckout());
+      
+      const btnBackToCart = document.getElementById('btnBackToCart');
+      if (btnBackToCart) {
+        btnBackToCart.addEventListener('click', () => {
+          this.closeCheckout();
+          this.openCart();
+        });
+      }
       
       // Form submit -> WhatsApp
       this.checkoutForm.addEventListener('submit', (e) => {
@@ -371,6 +380,43 @@
           this.removeFromCart(e.target.getAttribute('data-id'));
         });
       });
+    }
+
+    flyToCart(imgElement) {
+      const cartIcon = document.getElementById('cartToggle');
+      if (!imgElement || !cartIcon) return;
+
+      const imgRect = imgElement.getBoundingClientRect();
+      const cartRect = cartIcon.getBoundingClientRect();
+
+      const flyingImg = imgElement.cloneNode();
+      flyingImg.style.position = 'fixed';
+      flyingImg.style.left = `${imgRect.left}px`;
+      flyingImg.style.top = `${imgRect.top}px`;
+      flyingImg.style.width = `${imgRect.width}px`;
+      flyingImg.style.height = `${imgRect.height}px`;
+      flyingImg.style.objectFit = 'cover';
+      flyingImg.style.borderRadius = '8px';
+      flyingImg.style.zIndex = '10005';
+      flyingImg.style.transition = 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+      flyingImg.style.pointerEvents = 'none';
+      
+      document.body.appendChild(flyingImg);
+
+      requestAnimationFrame(() => {
+        flyingImg.style.left = `${cartRect.left + cartRect.width / 2 - 10}px`;
+        flyingImg.style.top = `${cartRect.top + cartRect.height / 2 - 10}px`;
+        flyingImg.style.width = '20px';
+        flyingImg.style.height = '20px';
+        flyingImg.style.opacity = '0.5';
+        flyingImg.style.transform = 'scale(0.1)';
+      });
+
+      setTimeout(() => {
+        if (flyingImg.parentElement) flyingImg.remove();
+        cartIcon.classList.add('bounce');
+        setTimeout(() => cartIcon.classList.remove('bounce'), 400);
+      }, 800);
     }
 
     showToast(productName, imgSrc) {
