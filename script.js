@@ -67,7 +67,7 @@
           const span = document.createElement('span');
           span.className = 'char';
           span.textContent = char === ' ' ? '\u00A0' : char;
-          span.style.animationDelay = `${1.7 + i * 0.07}s`;
+          span.style.animationDelay = `${0.1 + i * 0.07}s`;
           el.appendChild(span);
         });
       });
@@ -537,11 +537,11 @@
       setTimeout(() => {
         const heroDivider = document.querySelector('.hero__divider .divider--dot');
         if (heroDivider) heroDivider.classList.add('animated');
-      }, 2700);
+      }, 800);
 
       setTimeout(() => {
         document.querySelectorAll('.reveal:not(.revealed)').forEach(el => el.classList.add('revealed'));
-      }, 4000);
+      }, 1500);
     });
   });
 
