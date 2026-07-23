@@ -256,13 +256,6 @@ button { font-family:inherit; }
 .product-card:hover .product-card__image { transform: scale(1.08); }
 .product-card:hover .product-card__image-hover { opacity: 1; transform: scale(1.05); }
 
-/* ─── Google Maps Autocomplete ─────────────── */
-.pac-container { background-color: var(--clr-white); border: 1px solid var(--accent-border); border-radius: var(--r-sm); box-shadow: 0 4px 15px rgba(0,0,0,0.1); font-family: var(--font-b); font-size: 0.9rem; z-index: 10006 !important; }
-.pac-item { padding: 0.5rem 1rem; cursor: pointer; color: var(--clr-dark-700); }
-.pac-item:hover { background-color: var(--clr-cream-50); }
-.pac-item-query { font-weight: 600; color: var(--clr-dark-900); }
-.pac-icon { display: none; }
-
 /* ─── Media Queries ──────────────────────── */
 @media (max-width: 768px) {
   .navbar__links { position:fixed; inset:0; background:rgba(28,25,23,0.98); backdrop-filter:blur(20px); flex-direction:column; justify-content:center; gap:2rem; opacity:0; visibility:hidden; transition: all 0.4s var(--ease); }
