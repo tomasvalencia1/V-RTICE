@@ -104,8 +104,9 @@ button { font-family:inherit; }
 .line-grow.revealed { width: 40px; }
 
 /* ─── Navigation ─────────────────────────── */
-.navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:var(--sp-md) 0; transition: all 0.5s var(--ease); }
-.navbar.scrolled { background: rgba(28,25,23,0.94); backdrop-filter: blur(30px); padding:0.7rem 0; border-bottom:1px solid var(--w08); }
+.navbar { position:fixed; top:0; left:0; right:0; z-index:1000; padding:var(--sp-md) 0; transition: all 0.5s var(--ease); pointer-events: none; }
+.navbar > .container { pointer-events: auto; }
+.navbar.scrolled { padding:0.7rem 0; }
 .navbar__logo { display:flex; align-items:center; gap:0.75rem; transition: transform var(--t-base); }
 .navbar__logo:hover { transform: scale(1.03); }
 .navbar__monogram { height:42px; width:auto; transition: all var(--t-base); }
