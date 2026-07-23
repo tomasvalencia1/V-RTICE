@@ -255,6 +255,72 @@
     }
   }
 
+  // ─── Google Maps Integration ──────────────
+  class CheckoutMap {
+    constructor() {
+      this.mapContainer = document.getElementById('mapContainer');
+      this.addressInput = document.getElementById('cxAddress');
+      this.map = null;
+      this.marker = null;
+      this.geocoder = null;
+      this.autocomplete = null;
+    }
+    init() {
+      if (!this.mapContainer || !this.addressInput || typeof google === 'undefined') return;
+      
+      const defaultPos = { lat: 6.2442, lng: -75.5812 }; // Medellin
+      
+      this.map = new google.maps.Map(this.mapContainer, {
+        center: defaultPos,
+        zoom: 13,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false
+      });
+      
+      this.marker = new google.maps.Marker({
+        position: defaultPos,
+        map: this.map,
+        draggable: true,
+        animation: google.maps.Animation.DROP
+      });
+      
+      this.geocoder = new google.maps.Geocoder();
+      
+      this.autocomplete = new google.maps.places.Autocomplete(this.addressInput, {
+        types: ['geocode', 'establishment'],
+        componentRestrictions: { country: 'co' }
+      });
+      this.autocomplete.bindTo('bounds', this.map);
+      
+      this.autocomplete.addListener('place_changed', () => {
+        const place = this.autocomplete.getPlace();
+        if (!place.geometry || !place.geometry.location) return;
+        
+        this.map.setCenter(place.geometry.location);
+        this.map.setZoom(17);
+        this.marker.setPosition(place.geometry.location);
+      });
+      
+      this.map.addListener('click', (e) => {
+        this.marker.setPosition(e.latLng);
+        this.reverseGeocode(e.latLng);
+      });
+      
+      this.marker.addListener('dragend', () => {
+        this.reverseGeocode(this.marker.getPosition());
+      });
+    }
+    
+    reverseGeocode(latLng) {
+      this.geocoder.geocode({ location: latLng }, (results, status) => {
+        if (status === 'OK' && results[0]) {
+          this.addressInput.value = results[0].formatted_address;
+        }
+      });
+    }
+  }
+
   // ─── E-commerce / Cart Logic ──────────────
   class EcommerceSystem {
     constructor() {
@@ -430,6 +496,12 @@
     openCheckout() {
       this.checkoutModal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      if (window.checkoutMapInstance && window.checkoutMapInstance.map) {
+        setTimeout(() => {
+            google.maps.event.trigger(window.checkoutMapInstance.map, 'resize');
+            window.checkoutMapInstance.map.setCenter(window.checkoutMapInstance.marker.getPosition());
+        }, 300);
+      }
     }
 
     closeCheckout() {
@@ -486,6 +558,7 @@
       new WhatsAppFloat();
       new FAQAccordion();
       new EcommerceSystem();
+      window.checkoutMapInstance = new CheckoutMap();
 
       // Trigger hero divider animation
       setTimeout(() => {
@@ -498,5 +571,11 @@
       }, 4000);
     });
   });
+
+  window.initMap = () => {
+    if (window.checkoutMapInstance) {
+      window.checkoutMapInstance.init();
+    }
+  };
 
 })();
