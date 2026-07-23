@@ -284,9 +284,10 @@
           const price = parseInt(btn.getAttribute('data-price'));
           const color = card.querySelector('.color-select').value;
           const size = card.querySelector('.size-select').value;
+          const imgSrc = card.querySelector('.product-card__image').src;
           
           this.addToCart({ id: id + '-' + color + '-' + size, name, price, color, size, qty: 1 });
-          this.showToast(name);
+          this.showToast(name, imgSrc);
         });
       });
 
@@ -372,20 +373,46 @@
       });
     }
 
-    showToast(productName) {
+    showToast(productName, imgSrc) {
       const container = document.getElementById('toastContainer');
       if (!container) return;
       const toast = document.createElement('div');
       toast.className = 'toast';
-      toast.textContent = `${productName} añadida al carrito`;
+      toast.innerHTML = `
+        <div class="toast-content">
+          <img src="${imgSrc}" class="toast-img" alt="${productName}">
+          <div class="toast-info">
+            <div class="toast-title">
+              <svg viewBox="0 0 24 24" class="toast-icon"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+              <span>¡Agregado con éxito!</span>
+            </div>
+            <p>${productName}</p>
+          </div>
+        </div>
+        <div class="toast-actions">
+          <button class="btn-toast-cart">Ver Carrito</button>
+          <button class="btn-toast-checkout">Pagar Ahora</button>
+        </div>
+      `;
       container.appendChild(toast);
+      
+      toast.querySelector('.btn-toast-cart').addEventListener('click', () => {
+        toast.classList.remove('show');
+        this.openCart();
+      });
+      toast.querySelector('.btn-toast-checkout').addEventListener('click', () => {
+        toast.classList.remove('show');
+        this.openCheckout();
+      });
       
       requestAnimationFrame(() => toast.classList.add('show'));
       
       setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => toast.remove(), 400);
-      }, 3000);
+        if(toast.parentElement) {
+          toast.classList.remove('show');
+          setTimeout(() => toast.remove(), 400);
+        }
+      }, 5000);
     }
 
     openCart() {
